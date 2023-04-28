@@ -8,49 +8,62 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body class="body-main">
+    <script src="main.js" type="module"></script>
     <nav class="menu">
         <ul class="menu-ul">
-            <div class="menu-nav">
-                <img src="./assets/pokebola-icon.svg" alt="Icone da pokebola" class="img-icon">
-                <li>Home</li>
-            </div>
-
-            <div class="menu-nav">
-                <img src="./assets/pikachu-icon.svg" alt="Icone do pikachu" class="img-icon">
-                <li>Pokemons</li>
-            </div>
-
-            <div class="menu-nav">
-                <img src="./assets/squirtle-icon.svg" alt="Icone do squirtle" class="img-icon">
-                <li>Anime</li>
-            </div>
-
-            <div class="menu-nav">
-                <img src="./assets/pokemon-go-icon.svg" alt="Icone do pokemon-go" class="img-icon">
-                <li>PokémonGo</li>
-            </div>
+            <li>
+                <div class="menu-nav">
+                    <img src="./assets/pokebola-icon.svg" alt="Icone da pokebola" class="img-icon">
+                    <p>Home</p>
+                </div>
+            </li>
+            <li>
+                <div class="menu-nav">
+                    <img src="./assets/pikachu-icon.svg" alt="Icone do pikachu" class="img-icon">
+                    <p>Pokemons</p>
+                </div>
+            </li>
+            <li>
+                <div class="menu-nav">
+                    <img src="./assets/squirtle-icon.svg" alt="Icone do squirtle" class="img-icon">
+                    <p>Anime</p>
+                </div>
+            </li>
+            <li>
+                <div class="menu-nav">
+                    <img src="./assets/pokemon-go-icon.svg" alt="Icone do pokemon-go" class="img-icon">
+                    <p>PokémonGo</p>
+                </div>
+            </li>
         </ul>
     </nav>
     <div class="home">
         <div class="home-welcome">
-            <p>
-                Olá Caçador(a), {nome}, seja bem-vindo(a) ao Pokébox, seu site mais completo sobre Pokémon.
-            </p>
+            <p>Olá Caçador(a) <span id="name"></span>, seja bem-vindo(a) ao Pokébox, seu site mais completo sobre Pokémon.</p>
         </div>
         <div class="home-about">
-            <h2>
-                Sobre o Pokébox:
-            </h2>
-            <p>
-                O Pokébox é um website feito para os fãs de pokémon. 
-                Aqui você encontra as informações sobre cada um dos pokémons, historia do anime e pokémonGO.
-                Você também consegue filtra-los de acordo com a sua busca, por exemplo:
-
-                Filtrar por nome (a-z ou z-a)
-                Elemento de cada pikachu
-                Pesquisar por nomes
+            <h2>Sobre o Pokébox:</h2>
+            <p>O Pokébox é um website feito para os fãs de pokémon. Aqui você encontra as informações sobre cada um dos pokémons, historia do anime e pokémonGO. Você também consegue filtra-los de acordo com a sua busca, por exemplo: Filtrar por nome (a-z ou z-a) e pesquisar.
             </p>
         </div>
     </div>
+    <div class="pokemons">
+        <div class="filter-input">
+            <select name="" id="">
+                <option value="" selected disabled>Filtro</option>
+                <option value="">Nome (A-Z)</option>
+                <option value="">Nome (Z-A)</option>
+            </select>
+            <div class="input-search-btn">
+                <input type="text" name="" id="search-input" placeholder="Pesquisar..."><button>Pesquisar</button>
+            </div>
+        </div>
+        <div class="card-pokemon">
+            <img src="assets/Pokemon-Bulbasaur.png" alt="imagem-Bulbasaur">
+            <p>Nome: Bulbassaur</p>
+        </div>
+    </div>
+
+    <footer>Copyright &copy; Mislene e Nicole - SAP010 Laboratoria</footer>
 </body>
 </html>
