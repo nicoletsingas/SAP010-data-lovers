@@ -1,4 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+:root{
+    --CorPrincipal: #6366F1;
+    --CorGradient: #3638be;
+    --CorSecundaria: #fac705;
+    --CorBackground: #EEF2FF;
+    --CorShadow: #DBDDE4;
+}
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.main{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pokemon-logo{
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+} 
+
+.img-pikachu{
+    background-image: linear-gradient(to bottom, var(--CorPrincipal), var(--CorGradient));
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-logo-responsive{
+    display: none;
+}
+
+.welcome h1{
+    margin-bottom: 50px;
+}
+
+.welcome p, input{
+    margin-bottom: 20px;
+}
+
+.welcome input{
+    height: 40px;
+    width: 50%;
+    border: 1px solid #999;
+    color: #4b4b4b;
+    font-size: 16px;
+    outline-color: var(--CorSecundaria);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.welcome .div-button{
+    align-items: center;
+    margin-top: 30px;
+    width: 40%;
+}
+
+.welcome a{
+    text-decoration: none;
+}
+
+.welcome .button{
+    height: 45px;
+    width: 100%;
+    background-color: var(--CorPrincipal);
+    color: #FFF;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.welcome .button:hover{
+    background-color: #fac905c9;
+    letter-spacing: 2px;
+    transition: .1s;
+    cursor: pointer;
+}
+
+/* Responsivo */
+
+@media screen and (max-width:980px){
+    .img-pikachu{
+        display: none;
+    }
+
+    .welcome{
+        width: 100%;
+    }
+
+    .pokemon-logo-responsive{
+        height: 50px;
+        width: 100px;
+        display: block;
+        margin-bottom: 70px;
+    }
+
+    .pokemon-logo{
+        display: none;
+    }
 }
