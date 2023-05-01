@@ -6,75 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokébox</title>
     <link rel="stylesheet" href="./style.css">
+    
 </head>
 <body class="body-main">
-    <script src="main.js" type="module"></script>
     <nav class="menu">
         <ul class="menu-ul">
             <li>
-                <div class="menu-nav">
+                <div class="menu-nav" id="home-nav">
                     <img src="./assets/pokebola-icon.svg" alt="Icone da pokebola" class="img-icon">
                     <p>Home</p>
                 </div>
             </li>
             <li>
-                <div class="menu-nav">
+                <div class="menu-nav" id="pokemons-nav">
                     <img src="./assets/pikachu-icon.svg" alt="Icone do pikachu" class="img-icon">
                     <p>Pokemons</p>
                 </div>
             </li>
             <li>
-                <div class="menu-nav">
+                <div class="menu-nav" id="anime-nav">
                     <img src="./assets/squirtle-icon.svg" alt="Icone do squirtle" class="img-icon">
                     <p>Anime</p>
                 </div>
             </li>
             <li>
-                <div class="menu-nav">
+                <div class="menu-nav" id="pokemongo-nav">
                     <img src="./assets/pokemon-go-icon.svg" alt="Icone do pokemon-go" class="img-icon">
                     <p>PokémonGo</p>
                 </div>
             </li>
         </ul>
     </nav>
-    <div class="home">
-        <div class="home-welcome">
-            <p>Olá Caçador(a) <span id="name"></span>, seja bem-vindo(a) ao Pokébox, seu site mais completo sobre Pokémon.</p>
-        </div>
-        <div class="home-about">
-            <h2>Sobre o Pokébox:</h2>
-            <p>O Pokébox é um website feito para os fãs de pokémon. Aqui você encontra as informações sobre cada um dos pokémons, historia do anime e pokémonGO. Você também consegue filtra-los de acordo com a sua busca, por exemplo: Filtrar por nome (a-z ou z-a) e pesquisar.
-            </p>
-        </div>
-    </div>
-    <div class="pokemons">
-        <div class="filter-input">
-            <select name="" id="">
-                <option value="" selected disabled>Filtro</option>
-                <option value="">Nome (A-Z)</option>
-                <option value="">Nome (Z-A)</option>
-            </select>
-            <div class="input-search-btn">
-                <input type="text" name="" id="search-input" placeholder="Pesquisar..."><button>Pesquisar</button>
+    <div class="pages-container">
+        <div class="home visible">
+            <div class="home-welcome">
+                <p>Olá Caçador(a) <span id="name"></span>, seja bem-vindo(a) ao Pokébox, seu site mais completo sobre Pokémon.</p>
+            </div>
+            <div class="home-about">
+                <h2>Sobre o Pokébox:</h2>
+                <p>O Pokébox é um website feito para os fãs de pokémon. Aqui você encontra as informações sobre cada um dos pokémons, historia do anime e pokémonGO. Você também consegue filtra-los de acordo com a sua busca, por exemplo: Filtrar por nome (a-z ou z-a) e pesquisar.
+                </p>
             </div>
         </div>
-        <div class="card-pokemon">
-            <img src="assets/Pokemon-Bulbasaur.png" alt="imagem-Bulbasaur">
-            <p>Nome: Bulbassaur</p>
+        <div class="pokemons">
+            <div class="filter-input">
+                <select name="" id="">
+                    <option value="" selected disabled>Filtro</option>
+                    <option value="">Nome (A-Z)</option>
+                    <option value="">Nome (Z-A)</option>
+                </select>
+                <div class="input-search-btn">
+                    <input type="text" name="" id="search-input" placeholder="Pesquisar..."><button>Pesquisar</button>
+                </div>
+            </div>
+            <div class="card-pokemon">
+                <img src="assets/Pokemon-Bulbasaur.png" alt="imagem-Bulbasaur">
+                <p>Nome: Bulbassaur</p>
+            </div>
         </div>
-    </div>
-    <div class="description">
         <div class="anime">
-            <h3>Anime</h3>
-            <p>Anime é um jogo de entrada no hobby,com opções estratégicas interessantes, que busca ser divertido tanto para jogadores mais experientes no mundo dos Games, quanto para jogadores que estejam começando a se aventurar. Nesta aventura o jogador irá representar um Herói, com características e habilidades únicas, que está enfrentando desafios e inimigos para vencer um dos grandes Senhores das Trevas que assolam o mundo.</p>
-            <img src="./assets/Anime.png" alt="Imagem de Animes" class="img-anime">
+            <h2>Sobre o Anime</h2>
+            <img src="./assets/pokemon-anime.webp" alt="Imagem de Animes" class="img-anime">
+            <p> Pokémon é uma série de anime, parte da franquia de mídia Pokémon da <a target="_blank" href="https://www.pokemon.com/br/">The Pokémon Company</a>, que estreou na TV Tokyo em 1º de abril de 1997,criada pelo ator <strong>Satoshi Tajiri</strong>.<br>
+            A franquia de anime consiste em oito séries sequenciais no Japão, cada uma baseada em uma parcela principal da série de jogos eletrônicos Pokémon. <br>
+            Nas transmissões internacionais, essas sete séries são divididas em 25 temporadas, com a 25ª temporada, Jornadas Supremas, sendo transmitida pela Netflix no Brasil (com episódios adicionais a serem lançados trimestralmente). <br>
+            O Anime originalmente seguiu Ash Ketchum, um jovem treinador de criaturas fictícias chamadas Pokémon. Acompanhado por seu parceiro Pikachu e um elenco rotativo de personagens humanos, Ash embarca em uma jornada para se tornar um <strong>"Mestre Pokémon"</strong>, viajando pelas várias regiões do mundo e competindo em vários torneios de batalha conhecidos como Liga Pokémon. No entanto, na 26ª temporada Pokemon Horizontes – A Série, um novo elenco é apresentado, com novos protagonistas Liko e Roy.</p>
+            
         </div>
         <div class="pokemongo">
-            <h3>PokémonGo</h3>
-            <p>PokémonGO é um jogo eletrônico de realidade aumentada voltado para smartphones, que permite aos jogadores capturar, batalhar e treinar criaturas virtuais chamadas de Pokémon. O jogo tem como estímulo e intuito tornar os nossos jogadores ainda mais ativos no mundo real.</p>
+            <h2>PokémonGo</h2>
             <img src="./assets/Pokemon-Go.png" alt="Logo de PokemonGo" class="img-pokemongo">
+            <p>PokémonGO é um jogo eletrônico de realidade aumentada voltado para smartphones, que permite aos jogadores capturar, batalhar e treinar criaturas virtuais chamadas de Pokémon. O jogo tem como estímulo e intuito tornar os nossos jogadores ainda mais ativos no mundo real.</p>
+            
         </div>
     </div>
     <footer>Copyright &copy; Mislene e Nicole - SAP010 Laboratoria</footer>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
