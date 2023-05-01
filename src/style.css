@@ -113,7 +113,7 @@ body{
     background-color: var(--CorBackground);
 }
 
-.menu, .home-welcome, .home-about{
+.menu, .home-welcome, .home-about, .card-pokemon,.anime, .pokemongo{
     box-shadow: 3px 6px 10px var(--CorShadow);
 }
 
@@ -160,7 +160,7 @@ body{
 }
 
 .home {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -184,26 +184,33 @@ body{
     font-size: 1.2em;
 }
 
-.home-welcome, .home-about {
+.home-welcome, .home-about, .anime, .pokemongo {
     border-radius: 10px;
 }
 
-.home-about {
+.home-about, .anime, .pokemongo {
     background-color: #fff;
     padding: 10px 6px;
 }
 
-.home-about h2{
+.home-about h2, .anime h2, .pokemongo h2{
     text-align: center;
     margin-bottom: 20px;
 }
 
-.home-about p{
+.home-about p, .anime p, .pokemongo p{
     font-size: 1.1em;
+    padding-left: 5px;
 }
 
-.pokemons{
+.anime, .pokemongo{
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemons, .anime, .pokemongo{
     margin-top: 30px;
+    display: none;
 }
 
 .filter-input{
@@ -245,47 +252,48 @@ body{
     height: 90px;
 }
 
-.description{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.anime {
     margin-top: 50px;
-    gap: 50px;
-    padding: 0px 10px;
     width: 100%;
     max-width: 1000px;
-}
-
-.anime{
-    background-color: #fff;
-    padding: 10px 6px;
-}
-
-.anime h3{
-    text-align: left;
-    margin-bottom: 20px;
+    align-items: center;
 }
 
 .img-anime{
-    height: 90px;
+    margin-bottom: 40px;
+    height: 40%;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.anime strong{
+    background-color: var(--CorPrincipal);
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.anime a {
+    color: var(--CorSecundaria);
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px #3a3a3a;
 }
 
 .pokemongo {
-    background-color: #fff;
-    padding: 10px 6px;
-} 
-
-.pokemongo h3{
-    text-align: left;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1000px;
+    align-items: center;
 }
 
 .img-pokemongo {
-    height: 35px;
-    margin: 10px 0 4px 0;
+    width: 25%;
+    margin-bottom: 40px;
 }
 
+.visible{
+    display: flex;
+}
 
 footer{
     background-image: linear-gradient(to right, #6365f1b7, #3638bec5);
