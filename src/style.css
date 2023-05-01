@@ -245,6 +245,47 @@ body{
     height: 90px;
 }
 
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 50px;
+    padding: 0px 10px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.anime{
+    background-color: #fff;
+    padding: 10px 6px;
+}
+
+.anime h3{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.img-anime{
+    height: 90px;
+}
+
+.pokemongo {
+    background-color: #fff;
+    padding: 10px 6px;
+} 
+
+.pokemongo h3{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.img-pokemongo {
+    height: 35px;
+    margin: 10px 0 4px 0;
+}
+
 
 footer{
     background-image: linear-gradient(to right, #6365f1b7, #3638bec5);
@@ -256,7 +297,6 @@ footer{
     font-size: 1.1em;
     padding-top: 10px;
 }
-
 
 
 /* Responsivo */
