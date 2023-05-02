@@ -3,6 +3,7 @@
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 console.log(example, data);
+console.log(data);
 
 let currentUser;
 let nameUser = document.querySelector("#name");
@@ -15,6 +16,9 @@ const divHome = document.querySelector('.home');
 const divPokemons = document.querySelector('.pokemons');
 const divAnime = document.querySelector('.anime');
 const divPokemonGo = document.querySelector('.pokemongo');
+
+const pokemons = document.querySelector('.div-parent-pokemon');
+const pokemonList = data.pokemon;
 
 window.addEventListener("pageshow", function(){
     currentUser = localStorage.getItem("nomeUsuario");
@@ -46,5 +50,13 @@ function showHideDiv(pokemon){
     content.classList.add('visible')
 };
 
-
-
+ for (let i=0; i < pokemonList.length; i++){
+    const card = document.createElement("div")
+    card.classList.add("card-pokemon")
+    card.innerHTML = `
+        <img src="${pokemonList[i].img}" alt="imagem-pokemon">
+        <p>Nome: ${pokemonList[i].name}</p>
+        <p>Elemento: ${pokemonList[i].type}</p>
+        `
+    pokemons.appendChild(card) // colocar o card dentro da div (div-parent-pokemon)
+}
