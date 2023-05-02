@@ -125,6 +125,12 @@ body{
     margin-top: 20px;
 }
 
+.menu .burger-menu{
+    display: none;
+    height: 30px;
+    width: 30px;
+}
+
 .menu .menu-ul {
     display: flex;
     justify-content: center; /* alinhou conforme o flex */
@@ -213,6 +219,13 @@ body{
     display: none;
 }
 
+.pokemons{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
 .filter-input{
     display: flex;
     gap: 20px;
@@ -234,23 +247,32 @@ body{
     color: #4b4b4b;
     font-size: 16px;
     padding: 5px;
-}
+} 
 
 .filter-input .input-search-btn input{
     border-radius: 10px 0px 0px 10px;
     border: 2px solid var(--CorSecundaria);
 }
 
-.card-pokemon{
+.div-parent-pokemon{
     margin-top: 30px;
-    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    gap: 25px;
+} 
+
+.card-pokemon{
+    background-color: #FFFFFF;
     border-radius: 10px;
     padding: 5px;
-}
-
-.card-pokemon img{
-    height: 90px;
-}
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
 
 .anime {
     margin-top: 50px;
@@ -327,5 +349,15 @@ footer{
 
     .pokemon-logo{
         display: none;
+    }
+
+    .card-pokemon{
+        width: 33%;
+    }
+}
+
+@media screen and (max-width:590px){
+    .card-pokemon{
+        width: 80%;
     }
 }
