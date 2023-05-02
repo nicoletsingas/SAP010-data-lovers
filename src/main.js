@@ -11,5 +11,6 @@ window.addEventListener("pageshow", function(){
     currentUser = localStorage.getItem("nomeUsuario");
     nameUser.innerText = currentUser;
 })
- 
+
+
 
