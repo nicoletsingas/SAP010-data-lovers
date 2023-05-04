@@ -1,4 +1,4 @@
-import {filterData} from './data.js'; //importando função
+import {filterData, sortByAZ} from './data.js'; //importando função
 
 import data from './data/pokemon/pokemon.js';
 
@@ -18,11 +18,9 @@ const pokemonList = data.pokemon;
 const inputSearch = document.querySelector("#search-input");
 const statisticText = document.querySelector(".statistic-data");
 
+const selectOrder = document.querySelector("#select-order-pokemon");
+
 //listeners
-inputSearch.addEventListener("input", () => {
-  const filteredPokemonList = filterData(pokemonList, inputSearch.value)
-  renderPokemon(filteredPokemonList);
-});
 
 window.addEventListener("pageshow", function(){
   currentUser = localStorage.getItem("nomeUsuario");
@@ -44,6 +42,16 @@ animePage.addEventListener('click', function(){
 pokemonGoPage.addEventListener('click', function(){
   showHideDiv('.pokemongo')
 });
+
+inputSearch.addEventListener("input", () => {
+  const filteredPokemonList = filterData(pokemonList, inputSearch.value)
+  renderPokemon(filteredPokemonList);
+});
+
+selectOrder.addEventListener("change", () => {
+  const orderPokemon = sortByAZ(selectOrder.value, pokemonList);
+  renderPokemon(orderPokemon);
+})
 
 //functions/for
 
@@ -70,3 +78,4 @@ function renderPokemon(pokemonList){
   }
 }
 renderPokemon(pokemonList);
+
