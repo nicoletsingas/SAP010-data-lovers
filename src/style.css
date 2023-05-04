@@ -224,6 +224,7 @@ body{
     align-items: center;
     width: 100%;
     max-width: 1000px;
+    margin-top: 50px;
 }
 
 .filter-input{
@@ -327,7 +328,6 @@ footer{
     font-size: 1.1em;
     padding-top: 10px;
 }
-
 
 /* Responsivo */
 
