@@ -240,19 +240,18 @@ body{
     height: 40px;
 }
 
-.filter-input .input-search-btn button{
-    border-radius: 0px 10px 10px 0px;
+.filter-input input{
+    border-radius: 10px;
+    border: 2px solid var(--CorSecundaria);
     height: 40px;
-    border: 2px solid var(--CorSecundaria);
-    background-color: var(--CorSecundaria);
-    color: #4b4b4b;
-    font-size: 16px;
-    padding: 5px;
-} 
+    font-size: 1rem;
+    padding: 2px;
+    outline: var(--CorSecundaria);
+}
 
-.filter-input .input-search-btn input{
-    border-radius: 10px 0px 0px 10px;
-    border: 2px solid var(--CorSecundaria);
+.statistic-data {
+    font-size: 1.1rem;
+    color:#5b5959;
 }
 
 .div-parent-pokemon{
@@ -354,10 +353,54 @@ footer{
     .card-pokemon{
         width: 33%;
     }
+
+    .menu {
+        background-color: #fff;
+        width: 70%;
+        max-width: 800px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .menu .menu-ul {
+        padding: 6px;
+    }
+
+    .menu-nav {
+        font-size: 1em;
+    }
+    
+    .home-welcome p{
+        font-size: 1em;
+    }
+
+    .home-about h2 {
+        font-size: 1.3rem;
+    }
+
 }
 
 @media screen and (max-width:590px){
     .card-pokemon{
+        width: 60%;
+    }
+
+    .filter-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .input-search-btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .filter-input select{
+        font-size: 0.9rem;
+        height: 40px;
         width: 80%;
+        text-align: center;
     }
 }
