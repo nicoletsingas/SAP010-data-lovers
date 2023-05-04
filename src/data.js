@@ -1,4 +1,3 @@
-
 export function filterData(pokemonList, value){
   let filterPokemonList = [];
   if(value !== ""){
