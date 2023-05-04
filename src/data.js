@@ -17,3 +17,25 @@ export function filterData(pokemonList, value){
     return pokemonList
   } 
 }
+
+export function sortByAZ(value, pokemonList){
+  let sortPokemonAZ = [...pokemonList]; //.. spread - espalhar a lista de pokemons
+  if(value === 'a-z'){
+    sortPokemonAZ.sort(function (a, b){
+      if(a.name < b.name){
+        return -1;
+      }else{
+        return true;
+      }
+    })
+  }else if(value === 'z-a'){
+    sortPokemonAZ.sort(function (a, b){
+      if(a.name < b.name){
+        return true;
+      }else{
+        return -1;
+      }
+    })
+  }
+  return sortPokemonAZ
+}
