@@ -17,7 +17,6 @@
 
 body{
     height: 100vh;
-    width: 100vw;
     position: relative;
 }
 
@@ -113,6 +112,11 @@ body{
     background-color: var(--CorBackground);
 }
 
+.burger-menu{
+    display: none;
+}
+
+
 .menu, .home-welcome, .home-about, .card-pokemon,.anime, .pokemongo{
     box-shadow: 3px 6px 10px var(--CorShadow);
 }
@@ -123,12 +127,6 @@ body{
     max-width: 1000px;
     border-radius: 10px;
     margin-top: 20px;
-}
-
-.menu .burger-menu{
-    display: none;
-    height: 30px;
-    width: 30px;
 }
 
 .menu .menu-ul {
@@ -350,13 +348,9 @@ footer{
         display: none;
     }
 
-    .card-pokemon{
-        width: 33%;
-    }
-
     .menu {
         background-color: #fff;
-        width: 70%;
+        width: 85%;
         max-width: 800px;
         border-radius: 10px;
         margin-top: 20px;
@@ -365,6 +359,7 @@ footer{
     .menu .menu-ul {
         padding: 6px;
     }
+
 
     .menu-nav {
         font-size: 1em;
@@ -378,9 +373,51 @@ footer{
         font-size: 1.3rem;
     }
 
+    .card-pokemon{
+        width: 33%;
+    }
+
+    .anime {
+        margin-top: 50px;
+        margin-right: 10px;
+        width: 100%;
+        max-width: 800px;
+        align-items: center;
+    }
+
 }
 
 @media screen and (max-width:590px){
+    .body-main .burger-menu {
+        display: flex;
+        width: 50px;
+        height: 40px;
+        background-color: var(--CorSecundaria);
+        border-radius: 3px;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 10px;
+        padding: 6px;
+    }
+
+    .body-main .burger-menu:hover {
+        background-color: #6366F1;
+        color: #EEF2FF;
+    }
+
+    .menu {
+        max-width: 250px;
+        margin-top: 20px;
+        display: none;
+    }
+
+    .menu .menu-ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
     .card-pokemon{
         width: 60%;
     }
@@ -402,5 +439,22 @@ footer{
         height: 40px;
         width: 80%;
         text-align: center;
+    }
+
+    .anime, .pokemongo {
+        margin-top: 50px;
+        margin-left: 5px;
+        margin-right: 10px;
+        width: 100%;
+        max-width: 490px;
+        align-items: center;
+    }
+
+    .anime h2{
+        font-size: 1.3rem;
+    }
+
+    .anime p{
+        font-size: 1rem;
     }
 }

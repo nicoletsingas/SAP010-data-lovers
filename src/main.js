@@ -55,6 +55,7 @@ selectOrder.addEventListener("change", () => {
 
 //functions/for
 
+
 function showHideDiv(pokemon){
   const content = document.querySelector(pokemon)
   divHome.classList.remove('visible')
@@ -71,8 +72,8 @@ function renderPokemon(pokemonList){
     card.classList.add("card-pokemon")
     card.innerHTML = `
     <img src="${pokemonList[i].img}" alt="imagem-pokemon">
-    <p class="pokemon-name"><strong>Nome:</strong> ${pokemonList[i].name}</p>
-    <p class="pokemon-type"><strong>Elemento:</strong> ${pokemonList[i].type}</p>
+    <p class="pokemon-name"> <strong>${pokemonList[i].name}</strong></p>
+    <p class="pokemon-type"> ${pokemonList[i].type}</p>
     `
     pokemons.appendChild(card) // colocar o card dentro da div (div-parent-pokemon)
   }
