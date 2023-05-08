@@ -55,6 +55,7 @@ selectOrder.addEventListener("change", () => {
 
 //functions/for
 
+
 function showHideDiv(pokemon){
   const content = document.querySelector(pokemon)
   divHome.classList.remove('visible')
