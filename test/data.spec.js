@@ -1,4 +1,4 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterData, sortByAZ } from '../src/data.js';
 
 
 describe('example', () => {
