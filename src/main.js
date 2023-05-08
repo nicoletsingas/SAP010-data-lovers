@@ -20,6 +20,9 @@ const statisticText = document.querySelector(".statistic-data");
 
 const selectOrder = document.querySelector("#select-order-pokemon");
 
+const clickMenu = document.querySelector(".burger-menu");
+const itensMenu = document.querySelector(".menu");
+
 //listeners
 
 window.addEventListener("pageshow", function(){
@@ -53,8 +56,15 @@ selectOrder.addEventListener("change", () => {
   renderPokemon(orderPokemon);
 })
 
-//functions/for
+clickMenu.addEventListener("click", function(){
+  if(itensMenu.style.display === "block"){
+    itensMenu.style.display = "none"
+  }else{
+    itensMenu.style.display = "block"
+  }
+})
 
+//functions/for
 
 function showHideDiv(pokemon){
   const content = document.querySelector(pokemon)
@@ -74,7 +84,6 @@ function renderPokemon(pokemonList){
     const card = document.createElement("div")
     card.classList.add("card-pokemon")
     card.innerHTML = `
-    <p>${pokemonList[i].num}</p>
     <img src="${pokemonList[i].img}" alt="imagem-pokemon">
     <p class="pokemon-name"><strong>${pokemonList[i].name.charAt(0).toUpperCase() + pokemonList[i].name.slice(1)}</strong></p>
     <p class="pokemon-type"> ${pokemonList[i].type}</p>
