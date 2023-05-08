@@ -88,3 +88,4 @@ function renderPokemon(pokemonList){
   statisticText.innerText = `Foram encontrados ${amountPokemon} tipos de pokemons, equivale a ${totalPercent}%`
 }
 renderPokemon(pokemonList);
+
