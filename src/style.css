@@ -17,7 +17,6 @@
 
 body{
     height: 100vh;
-    width: 100vw;
     position: relative;
 }
 
@@ -294,7 +293,7 @@ body{
     border-radius: 3px;
 }
 
-.anime a {
+.anime a, .pokemongo a {
     color: var(--CorSecundaria);
     text-decoration: none;
     font-weight: 600;
@@ -403,4 +402,6 @@ footer{
         width: 80%;
         text-align: center;
     }
+
+    
 }
