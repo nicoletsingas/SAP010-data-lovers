@@ -292,7 +292,7 @@ body{
     border-radius: 3px;
 }
 
-.anime a {
+.anime a, .pokemongo a {
     color: var(--CorSecundaria);
     text-decoration: none;
     font-weight: 600;
@@ -440,7 +440,6 @@ footer{
         width: 80%;
         text-align: center;
     }
-
     .anime, .pokemongo {
         margin-top: 50px;
         margin-left: 5px;
