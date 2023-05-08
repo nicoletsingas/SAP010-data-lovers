@@ -1,5 +1,5 @@
 import {filterData, sortByAZ} from './data.js'; //importando função
-
+import {bgColorPokemons} from './pokemon-type.js';
 import data from './data/pokemon/pokemon.js';
 
 let currentUser;
@@ -29,7 +29,7 @@ window.addEventListener("pageshow", function(){
 
 homePage.addEventListener('click', function(){
   showHideDiv('.home')
-}) ;
+}); 
 
 pokemonsPage.addEventListener('click', function(){
   showHideDiv('.pokemons')
@@ -67,15 +67,24 @@ function showHideDiv(pokemon){
 function renderPokemon(pokemonList){
   pokemons.innerHTML = "";
   for (let i=0; i < pokemonList.length; i++){
+    const changeBackground = bgColorPokemons.find((typeOfPokemons) => {
+      return typeOfPokemons.type === pokemonList[i].type[0]
+    }) 
     const card = document.createElement("div")
     card.classList.add("card-pokemon")
     card.innerHTML = `
+    <p>${pokemonList[i].num}</p>
     <img src="${pokemonList[i].img}" alt="imagem-pokemon">
-    <p class="pokemon-name"><strong>Nome:</strong> ${pokemonList[i].name}</p>
-    <p class="pokemon-type"><strong>Elemento:</strong> ${pokemonList[i].type}</p>
+    <p class="pokemon-name"><strong>${pokemonList[i].name.charAt(0).toUpperCase() + pokemonList[i].name.slice(1)}</strong></p>
+    <p class="pokemon-type"> ${pokemonList[i].type}</p>
     `
+    card.style.backgroundColor = changeBackground.color
     pokemons.appendChild(card) // colocar o card dentro da div (div-parent-pokemon)
   }
+  const amountPokemon = pokemons.querySelectorAll(".card-pokemon").length
+  const percentPokemons = amountPokemon / data.pokemon.length * 100
+  const totalPercent = percentPokemons.toFixed(1)
+  
+  statisticText.innerText = `Foram encontrados ${amountPokemon} tipos de pokemons, equivale a ${totalPercent}%`
 }
 renderPokemon(pokemonList);
-

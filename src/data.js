@@ -2,7 +2,7 @@ export function filterData(pokemonList, value){
   let filterPokemonList = [];
   if(value !== ""){
     for(let pokemon of pokemonList){
-      if(pokemon.name.includes(value) || pokemon.type.toString().includes(value) ){
+      if(pokemon.name.toLowerCase().includes(value.toLowerCase()) || pokemon.type.toString().toLowerCase().includes(value.toLowerCase()) ){
         filterPokemonList.push(pokemon) //push joga o valor dentro do array
       }else if(filterPokemonList.includes(pokemon)){
         let pokemonIndex = filterPokemonList.findIndex((currentPokemon) =>{
