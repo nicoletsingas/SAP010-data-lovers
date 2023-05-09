@@ -1,23 +1,23 @@
 import { filterData, sortByAZ } from '../src/data.js';
 
 
-describe('example', () => {
+describe('Buscar pokemons por nome', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterData).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
+  /* it('returns `filterPokemonList`', () => {
+    expect(filterPokemonList()).toBe('variavel');
+  }); */
 });
 
 
-describe('anotherExample', () => {
+describe('Ordernar a-z, z-a', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof sortByAZ).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
+  /* it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
-  });
+  }); */
 });
