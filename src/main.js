@@ -14,7 +14,7 @@ const divPokemons = document.querySelector('.pokemons');
 const divAnime = document.querySelector('.anime');
 const divPokemonGo = document.querySelector('.pokemongo');
 const pokemons = document.querySelector('.div-parent-pokemon');
-const pokemonList = data.pokemon;
+const pokemonList = JSON.parse(JSON.stringify(data.pokemon).replaceAll("-", "_"));
 const inputSearch = document.querySelector("#search-input");
 const statisticText = document.querySelector(".statistic-data");
 
@@ -84,8 +84,10 @@ function renderPokemon(pokemonList){
     const card = document.createElement("div")
     card.classList.add("card-pokemon")
     card.innerHTML = `
-    <img src="${pokemonList[i].img}" alt="imagem-pokemon">
     <p class="pokemon-name"><strong>${pokemonList[i].name.charAt(0).toUpperCase() + pokemonList[i].name.slice(1)}</strong></p>
+    <img src="${pokemonList[i].img}" alt="imagem-pokemon">
+    <p><span class="pokemon-atk">Atk:</span> ${pokemonList[i].stats.base_attack} | <span class="pokemon-def">Def:</span> ${pokemonList[i].stats.base_defense}</p>
+    <p>${pokemonList[i].pokemon_rarity}</p>
     <p class="pokemon-type"> ${pokemonList[i].type}</p>
     `
     card.style.backgroundColor = changeBackground.color
