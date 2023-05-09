@@ -280,6 +280,16 @@ body{
     align-items: center;
 } 
 
+.pokemon-atk{
+    color: rgba(255, 0, 0, 0.65);
+    font-weight: 600;
+}
+
+.pokemon-def{
+    color: rgba(0, 0, 255, 0.65);
+    font-weight: 600;
+}
+
 .anime {
     margin-top: 50px;
     width: 100%;
