@@ -87,7 +87,6 @@ function renderPokemon(pokemonList){
     <p class="pokemon-name"><strong>${pokemonList[i].name.charAt(0).toUpperCase() + pokemonList[i].name.slice(1)}</strong></p>
     <img src="${pokemonList[i].img}" alt="imagem-pokemon">
     <p><span class="pokemon-atk">Atk:</span> ${pokemonList[i].stats.base_attack} | <span class="pokemon-def">Def:</span> ${pokemonList[i].stats.base_defense}</p>
-    <p>${pokemonList[i].pokemon_rarity}</p>
     <p class="pokemon-type"> ${pokemonList[i].type}</p>
     `
     card.style.backgroundColor = changeBackground.color
