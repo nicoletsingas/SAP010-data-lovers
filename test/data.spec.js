@@ -1,14 +1,13 @@
 import { filterData, sortByAZ } from '../src/data.js';
 
-
 describe('Buscar pokemons por nome', () => {
   it('is a function', () => {
     expect(typeof filterData).toBe('function');
   });
 
-  /* it('returns `filterPokemonList`', () => {
-    expect(filterPokemonList()).toBe('variavel');
-  }); */
+  it('returns `filterPokemonList`', () => {
+    expect()
+  })
 });
 
 
