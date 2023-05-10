@@ -17,7 +17,6 @@
 
 body{
     height: 100vh;
-    
 }
 
 .main{
@@ -117,7 +116,6 @@ body{
 .burger-menu{
     display: none;
 }
-
 
 .menu, .home-welcome, .home-about, .card-pokemon,.anime, .pokemongo{
     box-shadow: 3px 6px 10px var(--CorShadow);
@@ -366,14 +364,10 @@ body{
         padding: 6px;
     }
 
-    .menu-nav {
+    .menu-nav, .home-welcome p {
         font-size: 1em;
     }
     
-    .home-welcome p{
-        font-size: 1em;
-    }
-
     .home-about h2 {
         font-size: 1.3rem;
     }
