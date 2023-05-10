@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokébox</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body class="body-main">
+    <img class="burger-menu" src="assets/menu_icon.svg" alt="icone-menu">
+    <nav class="menu">
+        <ul class="menu-ul">
+            <li>
+                <div class="menu-nav" id="home-nav">
+                    <img src="./assets/pokebola-icon.svg" alt="Icone da pokebola" class="img-icon">
+                    <p>Home</p>
+                </div>
+            </li>
+            <li>
+                <div class="menu-nav" id="pokemons-nav">
+                    <img src="./assets/pikachu-icon.svg" alt="Icone do pikachu" class="img-icon">
+                    <p>Pokemons</p>
+                </div>
+            </li>
+            <li>
+                <div class="menu-nav" id="anime-nav">
+                    <img src="./assets/squirtle-icon.svg" alt="Icone do squirtle" class="img-icon">
+                    <p>Anime</p>
+                </div>
+            </li>
+            <li>
+                <div class="menu-nav" id="pokemongo-nav">
+                    <img src="./assets/pokemon-go-icon.svg" alt="Icone do pokemon-go" class="img-icon">
+                    <p>PokémonGo</p>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="pages-container">
+        <div class="home visible">
+            
+            <div class="home-welcome">
+                <p>Olá treinador(a) <span id="name"></span>, seja bem-vindo(a) ao Pokébox, seu site mais completo sobre Pokémon.</p>
+            </div>
+            <img class="gif" src="assets/hello-pikachu.gif" alt="">
+            <div class="home-about">
+                <h2>Sobre o Pokébox:</h2>
+                <p>O Pokébox é um website feito para os fãs de pokémon. Aqui você encontra informações sobre cada um dos <strong>251 pokémons</strong>, historia do anime e sobre jogo pokémonGO. Você também consegue filtrar os pokémons de acordo com a sua busca, por exemplo: Filtrar por ordem alfabética (a-z ou z-a), pesquisar pelo nomes e ou tipos dos Pokémons.
+                </p>
+            </div>
+        </div>
+        <div class="pokemons">
+            <div class="filter-input">
+                <select id="select-order-pokemon">
+                    <option value="filtro" selected disabled>Filtro</option>
+                    <option value="a-z">Nome (A-Z)</option>
+                    <option value="z-a">Nome (Z-A)</option>
+                </select>
+                <input type="search" name="" id="search-input" placeholder="Pesquisar...">
+            </div>
+            <h2 class="statistic-data">Foram encontrados 251 tipos de pokemons</h2>
+            <div class="div-parent-pokemon">
+                <!--Elementos criados em JS-->
+            </div>
+        </div>
+        <div class="anime">
+            <h2>Sobre o Anime</h2>
+            <img src="./assets/pokemon-anime.webp" alt="Imagem de Animes" class="img-anime">
+            <p>Assista aqui: <a target="_blank" href="https://watch.pokemon.com/pt-br/#/season?id=pokemon-aventuras-nas-ilhas-laranjas">TV Pokémon</a> <br>
+            Pokémon é uma série de anime, parte da franquia de mídia Pokémon da <a target="_blank" href="https://www.pokemon.com/br/">The Pokémon Company</a>, que estreou na TV Tokyo em 1º de abril de 1997,criada pelo ator <strong>Satoshi Tajiri</strong>.<br>
+            A franquia de anime consiste em oito séries sequenciais no Japão, cada uma baseada em uma parcela principal da série de jogos eletrônicos Pokémon. <br>
+            Nas transmissões internacionais, essas sete séries são divididas em 25 temporadas, com a 25ª temporada, Jornadas Supremas, sendo transmitida pela Netflix no Brasil (com episódios adicionais a serem lançados trimestralmente). <br>
+            O Anime originalmente seguiu Ash Ketchum, um jovem treinador de criaturas fictícias chamadas Pokémon. Acompanhado por seu parceiro Pikachu e um elenco rotativo de personagens humanos, Ash embarca em uma jornada para se tornar um <strong>"Mestre Pokémon"</strong>, viajando pelas várias regiões do mundo e competindo em vários torneios de batalha conhecidos como Liga Pokémon. No entanto, na 26ª temporada Pokemon Horizontes – A Série, um novo elenco é apresentado, com novos protagonistas Liko e Roy.</p>
+        </div>
+        <div class="pokemongo">
+            <h2>PokémonGo</h2>
+            <img class="gif" src="assets/pokemon-go.gif" alt="Logo de PokemonGo">
+            <p>Acesse aqui: <a href="https://pokemongolive.com/" target="_blank">Pokemon GO</a></p>
+            <p>PokémonGO é um jogo eletrônico de realidade aumentada voltado para smartphones, que permite aos jogadores capturar, batalhar e treinar criaturas virtuais chamadas de Pokémon. O jogo tem como estímulo e intuito tornar os nossos jogadores ainda mais ativos no mundo real. <br>
+            Ao jogar Pokémon GO o usuário interage com um mapa baseado no mundo real (inicialmente o Google Maps e atualmente o OpenStreetMap). O jogador se localiza e procura Pokémon por meio desse mapa. À medida que ele se desloca, o aplicativo vibra para avisar sobre a presença das criaturas virtuais pelo caminho. <br> Ao tocar a tela do smartphone é possível visualizar o Pokémon no mesmo local onde o jogador está, pois, o jogo sobrepõe à visualização da câmara a imagem do Pokémon e simula que ele está no local onde o jogador se encontra, semelhantemente à realidade virtual. Para capturar o monstrinho, basta arremessar uma Pokébola. Daí em diante, além de tentar pegar todos os tipos diferentes Pokémon, ao atingir o nível 5 do jogo é possível dominar os diversos ginásios espalhados pela cidade.</p>
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>
+</body>
+</html>

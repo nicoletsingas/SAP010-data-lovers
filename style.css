@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+:root{
+    --CorPrincipal: #6366F1;
+    --CorGradient: #3638be;
+    --CorSecundaria: #fac705;
+    --CorBackground: #EEF2FF;
+    --CorShadow: #bebebece;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+.main{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pokemon-logo{
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+} 
+
+.img-pikachu{
+    background-image: linear-gradient(to bottom, var(--CorPrincipal), var(--CorGradient));
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-logo-responsive{
+    display: none;
+}
+
+.welcome h1{
+    margin-bottom: 50px;
+}
+
+.welcome p, input{
+    margin-bottom: 20px;
+}
+
+.welcome input, .input-search-btn input{
+    height: 40px;
+    width: 50%;
+    border: 1px solid #999;
+    color: #4b4b4b;
+    font-size: 16px;
+    outline-color: var(--CorSecundaria);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.welcome .div-button{
+    align-items: center;
+    margin-top: 30px;
+    width: 40%;
+}
+
+.welcome a{
+    text-decoration: none;
+}
+
+.welcome .button{
+    height: 45px;
+    width: 100%;
+    background-color: var(--CorPrincipal);
+    color: #FFF;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.welcome .button:hover{
+    background-color: #fac905c9;
+    letter-spacing: 2px;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.body-main {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--CorBackground);
+}
+
+.burger-menu{
+    display: none;
+}
+
+.menu, .home-welcome, .home-about, .card-pokemon,.anime, .pokemongo{
+    box-shadow: 3px 6px 10px var(--CorShadow);
+}
+
+.menu {
+    background-color: #fff;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.menu .menu-ul {
+    display: flex;
+    justify-content: center; /* alinhou conforme o flex */
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.menu-nav {
+    display: flex;
+    font-size: 1.1em;
+}
+
+.menu-nav:hover{
+    cursor: pointer;
+    color: #fac705;
+    font-weight: 600;
+    background-color: #6366F1;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.menu-nav p{
+    padding: 3px;
+}
+
+.img-icon {
+    height: 30px;
+}
+
+.menu-ul li {
+    list-style-type: none;
+}
+
+.home {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 50px;
+    padding: 0px 10px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.gif{
+    height: 250px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.home-welcome {
+    background-image: linear-gradient(to right, var(--CorPrincipal), var(--CorGradient));
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.home-welcome p{
+    font-size: 1.2em;
+}
+
+.home-welcome, .home-about, .anime, .pokemongo {
+    border-radius: 10px;
+}
+
+.home-about, .anime, .pokemongo {
+    background-color: #fff;
+    padding: 10px 6px;
+}
+
+.home-about h2, .anime h2, .pokemongo h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.home-about p, .anime p, .pokemongo p{
+    font-size: 1.1em;
+    padding-left: 5px;
+}
+
+.anime, .pokemongo{
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemons, .anime, .pokemongo{
+    margin-top: 30px;
+    display: none;
+}
+
+.pokemons{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.filter-input{
+    display: flex;
+    gap: 20px;
+}
+
+.filter-input select{
+    border-radius: 10px;
+    background-color: var(--CorGradient);
+    color: #fff;
+    font-size: 1em;
+    height: 40px;
+}
+
+.filter-input input{
+    border-radius: 10px;
+    border: 2px solid var(--CorSecundaria);
+    height: 40px;
+    font-size: 1rem;
+    padding: 2px;
+    outline: var(--CorSecundaria);
+}
+
+.statistic-data {
+    font-size: 1.1rem;
+    color:#5b5959;
+    padding: 5px;
+}
+
+.div-parent-pokemon{
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    gap: 25px;
+    justify-content: center;
+} 
+
+.card-pokemon{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.pokemon-atk{
+    color: rgba(255, 0, 0, 0.65);
+    font-weight: 600;
+}
+
+.pokemon-def{
+    color: rgba(0, 0, 255, 0.65);
+    font-weight: 600;
+}
+
+.anime {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1000px;
+    align-items: center;
+}
+
+.img-anime{
+    margin-bottom: 40px;
+    height: 40%;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.anime strong{
+    background-color: var(--CorPrincipal);
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.anime a, .pokemongo a {
+    color: var(--CorSecundaria);
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px #3a3a3a;
+}
+
+.pokemongo {
+    margin: 50px 10px 0px;
+    width: 100%;
+    max-width: 1000px;
+    align-items: center;
+}
+
+.pokemongo .gif {
+    margin-bottom: 40px;
+}
+
+.visible{
+    display: flex;
+}
+
+/* Responsivo */
+
+@media screen and (max-width:1015px){
+    .img-pikachu{
+        display: none;
+    }
+
+    .welcome{
+        width: 100%;
+    }
+
+    .pokemon-logo-responsive{
+        height: 50px;
+        width: 100px;
+        display: block;
+        margin-bottom: 70px;
+    }
+
+    .pokemon-logo{
+        display: none;
+    }
+
+    .menu {
+        background-color: #fff;
+        width: 85%;
+        max-width: 800px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .menu .menu-ul {
+        padding: 6px;
+    }
+
+    .menu-nav, .home-welcome p {
+        font-size: 1em;
+    }
+    
+    .home-about h2 {
+        font-size: 1.3rem;
+    }
+
+    .div-parent-pokemon{
+        grid-template-columns: 200px 200px 200px;
+    } 
+
+    .anime, .pokemongo {
+        margin: 50px 10px 0px;
+        width: 100%;
+        max-width: 800px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:810px){
+    .anime, .pokemongo {
+        margin: 50px 10px 0px;
+        width: 100%;
+        max-width: 490px;
+        align-items: center;
+    }
+
+    .pokemongo .gif{
+        height: 150px;
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:670px){
+    .div-parent-pokemon{
+        grid-template-columns: 200px 200px;
+    }
+}
+
+@media screen and (max-width:590px){
+    .body-main .burger-menu {
+        display: flex;
+        width: 50px;
+        height: 40px;
+        background-color: var(--CorSecundaria);
+        border-radius: 3px;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 10px;
+        padding: 6px;
+    }
+
+    .body-main .burger-menu:hover {
+        background-color: #6366F1;
+        color: #EEF2FF;
+    }
+
+    .menu {
+        max-width: 250px;
+        margin-top: 20px;
+        display: none;
+    }
+
+    .menu .menu-ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .statistic-data{
+        text-align: center;
+    }
+
+    .div-parent-pokemon{
+        grid-template-columns: 200px;
+    } 
+
+    .filter-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .input-search-btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .filter-input select{
+        font-size: 0.9rem;
+        height: 40px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .gif{
+        height: 150px;
+        width: 300px;
+    }
+
+    .anime, .pokemongo {
+        margin: 50px 10px 0px;
+        width: 100%;
+        max-width: 490px;
+        align-items: center;
+    }
+
+    .anime h2{
+        font-size: 1.3rem;
+    }
+
+    .anime p{
+        font-size: 1rem;
+    }
+}
