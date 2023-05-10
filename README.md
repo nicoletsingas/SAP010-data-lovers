@@ -15,9 +15,9 @@ Desenvolvido por:
 
 * [1. Prefácio](#1-prefácio)
 * [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Histórias de usuário](#3-objetivos-de-aprendizagem)
-* [4. Histórias de usuário](#4-histórias-de-usuário)
-* [5. Objetivos de aprendizagem](#9-tecnologias-utilizadas)
+* [3. Histórias de usuário](#3-histórias-de-usuário)
+* [4. Objetivos de aprendizagem](#4-objetivos-de-aprendizagem)
+* [5. Tecnologias Utilizadas](#9-tecnologias-utilizadas)
 
 ***
 
