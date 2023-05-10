@@ -22,6 +22,7 @@ body{
 .main{
     display: flex;
     height: 100%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -47,7 +48,6 @@ body{
 .welcome{
     display: flex;
     flex-direction: column;
-    padding: 0px 10px;
     width: 50%;
     justify-content: center;
     align-items: center;
@@ -168,7 +168,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin: 50px 0px 10px;
     gap: 50px;
     padding: 0px 10px;
     width: 100%;
@@ -289,7 +289,7 @@ body{
 }
 
 .anime {
-    margin-top: 50px;
+    margin: 50px 0px 10px;
     width: 100%;
     max-width: 1000px;
     align-items: center;
@@ -316,7 +316,7 @@ body{
 }
 
 .pokemongo {
-    margin: 50px 10px 0px;
+    margin: 50px 10px 10px;
     width: 100%;
     max-width: 1000px;
     align-items: center;
@@ -335,7 +335,7 @@ body{
 @media screen and (max-width:1015px){
     .img-pikachu{
         display: none;
-    }
+    } 
 
     .welcome{
         width: 100%;
@@ -377,7 +377,7 @@ body{
     } 
 
     .anime, .pokemongo {
-        margin: 50px 10px 0px;
+        margin: 50px 10px 10px;
         width: 100%;
         max-width: 800px;
         align-items: center;
@@ -386,7 +386,7 @@ body{
 
 @media screen and (max-width:810px){
     .anime, .pokemongo {
-        margin: 50px 10px 0px;
+        margin: 50px 10px 10px;
         width: 100%;
         max-width: 490px;
         align-items: center;
@@ -401,6 +401,7 @@ body{
 @media screen and (max-width:670px){
     .div-parent-pokemon{
         grid-template-columns: 200px 200px;
+        margin-bottom: 10px;
     }
 }
 
@@ -441,6 +442,7 @@ body{
 
     .div-parent-pokemon{
         grid-template-columns: 200px;
+        margin-bottom: 10px;
     } 
 
     .filter-input {
@@ -468,9 +470,9 @@ body{
     }
     
     .anime, .pokemongo {
-        margin: 50px 10px 0px;
+        margin: 50px 10px 10px;
         width: 100%;
-        max-width: 490px;
+        max-width: 450px;
         align-items: center;
     }
 
@@ -480,5 +482,14 @@ body{
 
     .anime p{
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:470px){
+    .anime, .pokemongo {
+        margin: 50px 10px 10px;
+        width: 100%;
+        max-width: 350px;
+        align-items: center;
     }
 }
