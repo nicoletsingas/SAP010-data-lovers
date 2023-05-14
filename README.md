@@ -32,7 +32,7 @@ PokémonGO é um jogo eletrônico free-to-play de realidade aumentada voltado pa
 
 Neste projeto foi desenvolvido um website na qual o usuário visualizará os 251 pokémons e poderá filtrá-los pelo nome e tipo(elemento), ordená-los em ordem alfabética (A-Z, Z-A) e será mostrado uma estatística de tipo de dados conforme sua busca. O Website consta com uma interface 100% responsiva (pode ser acessado pelo celular, tablet, notebook).
 
-### Versão Final📎[Acesse aqui]()
+### Versão Final📎[Acesse aqui](https://nicoletsingas.github.io/SAP010-data-lovers/)
 ![versao-final](./src/assets/versao-final.png)
 ![versao-final2](./src/assets/versao-final-2.png)
 
