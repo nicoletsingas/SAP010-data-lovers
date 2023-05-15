@@ -49,7 +49,7 @@ pokemonGoPage.addEventListener('click', function(){
 inputSearch.addEventListener("input", () => {
   const filteredPokemonList = filterData(pokemonList, inputSearch.value)
   renderPokemon(filteredPokemonList);
-});
+}); 
 
 selectOrder.addEventListener("change", () => {
   const orderPokemon = sortByAZ(selectOrder.value, pokemonList);
@@ -78,8 +78,8 @@ function showHideDiv(pokemon){
 function renderPokemon(pokemonList){
   pokemons.innerHTML = "";
   for (let i=0; i < pokemonList.length; i++){
-    const changeBackground = bgColorPokemons.find((typeOfPokemons) => {
-      return typeOfPokemons.type === pokemonList[i].type[0]
+    const changeBackground = bgColorPokemons.find((typeOfPokemons) => { //arrow function
+      return typeOfPokemons.type === pokemonList[i].type[0] //compara os tipos de pokemons
     }) 
     const card = document.createElement("div")
     card.classList.add("card-pokemon")
