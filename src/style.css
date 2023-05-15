@@ -131,7 +131,7 @@ body{
 
 .menu .menu-ul {
     display: flex;
-    justify-content: center; /* alinhou conforme o flex */
+    justify-content: center; 
     gap: 20px;
     padding: 10px;
     width: 100%;
