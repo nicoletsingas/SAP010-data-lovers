@@ -22,7 +22,7 @@ export function sortByAZ(value, pokemonList){
         return true;
       }
     })
-  }else if(value === 'z-a'){
+  }else{
     sortPokemonAZ.sort(function (a, b){
       if(a.name < b.name){
         return true;

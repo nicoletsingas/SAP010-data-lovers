@@ -23,7 +23,7 @@ const squirtle = {
 }
 
 const testPokemons = [bulbasaur, charmander, squirtle]
-const testPokemons2 = [charmander, bulbasaur, squirtle]
+const testPokemons2 = [charmander, squirtle, bulbasaur]
 
 describe('Buscar pokemons por nome', () => {
   it('is a function', () => {
