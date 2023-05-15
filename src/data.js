@@ -18,15 +18,11 @@ export function sortByAZ(value, pokemonList){
     sortPokemonAZ.sort(function (a, b){
       if(a.name < b.name){
         return -1;
-      }else{
-        return true;
       }
     })
   }else{
     sortPokemonAZ.sort(function (a, b){
-      if(a.name < b.name){
-        return true;
-      }else{
+      if(a.name > b.name){
         return -1;
       }
     })
