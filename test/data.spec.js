@@ -27,7 +27,7 @@ const testPokemons2 = [charmander, squirtle, bulbasaur]
 
 describe('Buscar pokemons por nome', () => {
   it('is a function', () => {
-    expect(typeof filterData).toBe('function');
+    expect(typeof filterData).toBe('function'); // toBe compara se o valor é identico.
   });
 
   it('retorna os pokemons cujo nome tem uma das letras digitadas', () => {
@@ -35,7 +35,7 @@ describe('Buscar pokemons por nome', () => {
     const inputValueTest2 = "squi"
     const inputValueTest3 = ""
 
-    expect(filterData(testPokemons, inputValueTest1)).toEqual([bulbasaur]);
+    expect(filterData(testPokemons, inputValueTest1)).toEqual([bulbasaur]); //resultado que esperamos retornar
     expect(filterData(testPokemons, inputValueTest2)).toEqual([squirtle]);
     expect(filterData(testPokemons, inputValueTest3)).toEqual(testPokemons);
   }); 
@@ -44,7 +44,7 @@ describe('Buscar pokemons por nome', () => {
     const inputTypeTest1 = "grass"
     const inputTypeTest2 = "water"
     const inputTypeTest3 = "fire"
-    expect(filterData(testPokemons, inputTypeTest1)).toEqual([bulbasaur]);
+    expect(filterData(testPokemons, inputTypeTest1)).toEqual([bulbasaur]); //toEqual verifica se o valor é igual ao outro.
     expect(filterData(testPokemons, inputTypeTest2)).toEqual([squirtle]);
     expect(filterData(testPokemons, inputTypeTest3)).toEqual([charmander]);
   });

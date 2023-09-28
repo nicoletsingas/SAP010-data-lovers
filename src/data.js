@@ -10,7 +10,7 @@ export function filterData(pokemonList, value){
   }else{
     return pokemonList
   } 
-} 
+}
 
 export function sortByAZ(value, pokemonList){
   const sortPokemonAZ = [...pokemonList]; //.. spread - espalhar a lista de pokemons
